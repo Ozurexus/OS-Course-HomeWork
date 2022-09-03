@@ -1,0 +1,5 @@
+    1  history
+    2  whoami
+    3  mkdir newfolder
+    4  rm -r newfolder
+    5  history > ~/week1/ex2.txt
