@@ -1,24 +1,21 @@
 #include <stdio.h>
 #include <string.h>
 
-char arr[256];
-int main(void)
+int main(int argc, char* argv[])
 {
-    printf("Enter a string of size at most 256: ");
-    gets(arr);
     int i = 0;
-    char c = "";
-    while (c != '.' && i < strlen(arr))
+    char c = ' ';
+    while (c != '.' && i < strlen(argv[1]))
     {
         i++;
-        c = arr[i];
+        c = argv[1][i];
     }
     printf("\"");
     while (i > 0)
     {
         i--;
-        putchar(arr[i]);
+        putchar(argv[1][i]);
     }
-    printf("\"");
+    printf("\"\n");
     return 0;
 }

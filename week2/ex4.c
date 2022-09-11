@@ -29,12 +29,9 @@ void countAll(char word[256])
             printf(", ");
         }
     }
+    printf("\n");
 }
-int main(void)
+int main(int argc, char* argv[])
 {
-
-    char w[265];
-    printf("Enter the word:\n");
-    scanf("%s", w);
-    countAll(w);
+    countAll(argv[1]);
 }

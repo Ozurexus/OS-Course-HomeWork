@@ -2,7 +2,7 @@
 #include <string.h>
 #include <math.h>
 #include <stdlib.h>
-long long int convert(long long int x, int s, int t)
+long long int convert(int x, int s, int t)
 {
     if (s > 10 || s < 2 || t > 10 || t < 2)
     {
@@ -32,12 +32,7 @@ long long int convert(long long int x, int s, int t)
     }
     return z;
 }
-int main(void)
+int main(int argc, char *argv[])
 {
-    long long int b;
-    int from, to;
-    printf("Enter the number, starting system and second system: ");
-    scanf("%lli %d %d", &b, &from, &to);
-    b = convert(b, from, to);
-    printf("%lli", b);
+    printf("%lli\n", convert(atoi(argv[1]), atoi(argv[2]), atoi(argv[3])));
 }

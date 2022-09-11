@@ -8,10 +8,10 @@ int main(void)
     signed long int c = LONG_MAX;
     float d = FLT_MAX;
     double e = DBL_MAX;
-    printf("int: size - %d, value - %d\n", (sizeof(a)), a);
-    printf("unsigned short int: size - %d, value - %d\n", (sizeof(b)), b);
-    printf("signed long int: size - %d, value - %li\n", (sizeof(c)), c);
-    printf("float: size - %d, value - %f\n", (sizeof(d)), d);
-    printf("double: size - %d, value - %lf\n", (sizeof(e)), e);
+    printf("int: size - %d, value - %d\n", (int)(sizeof(a)), a);
+    printf("unsigned short int: size - %d, value - %d\n", (int)(sizeof(b)), b);
+    printf("signed long int: size - %d, value - %li\n", (int)(sizeof(c)), c);
+    printf("float: size - %d, value - %f\n", (int)(sizeof(d)), d);
+    printf("double: size - %d, value - %lf\n", (int)(sizeof(e)), e);
     return 0;
 }
