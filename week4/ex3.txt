@@ -1,0 +1,1 @@
+Every 5 seconds every running process creates a fork (child process). To begin with, there is only the main process, then it creates a new one, then both of them create new processes and so on. The created tree of processes called by pstree shows a binomial tree of n-th order, where n is the user's input.
