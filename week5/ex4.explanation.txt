@@ -1,1 +1,0 @@
-The more threads you create, the longer the process takes due to mutex locking and swithcing between threads.
