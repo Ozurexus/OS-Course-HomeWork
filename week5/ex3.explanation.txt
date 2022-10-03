@@ -1,1 +1,0 @@
-As it can be seen in ex3.txt, that creating more threads means less workload for each of them, which leads to the increase in speed of execution and decrease of exeution time.
