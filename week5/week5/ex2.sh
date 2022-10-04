@@ -1,1 +1,1 @@
-gcc -pthread ex3.c -o ex && ./ex
+gcc -pthread ex2.c -o ex && ./ex
