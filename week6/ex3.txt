@@ -1,0 +1,18 @@
+Number of processes: 4
+Enter quantum: 3
+Process 1. Arrival time: 0
+Burst time: 3
+Process 2. Arrival time: 1
+Burst time: 2
+Process 3. Arrival time: 2
+Burst time: 4
+Process 4. Arrival time: 3
+Burst time: 6
+id: 1.  at: 0.  bt: 3.  ct: 3.  tat: 3. wt: 0.
+id: 2.  at: 1.  bt: 2.  ct: 5.  tat: 4. wt: 2.
+id: 3.  at: 2.  bt: 4.  ct: 12. tat: 10.        wt: 6.
+id: 4.  at: 3.  bt: 6.  ct: 15. tat: 12.        wt: 6.
+Average TAT: 7.250000   Average WT: 3.500000
+
+In this particular case, round robin performed worse than the previous two, but that certainly does not mean it is worse.
+This algorithm in contrast to the others focuses on time sharing technique, which is a good way to distribute computing time between processes more evenly
