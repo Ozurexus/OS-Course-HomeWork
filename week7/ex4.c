@@ -1,53 +1,61 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
-void *my_realloc(void *ptr, int size)
+void *my_realloc(void *ptr, size_t size)
 {
-    if (size == 0)
-    {
-        free(ptr);
-        return NULL;
-    }
     if (ptr == NULL)
     {
         return malloc(size);
     }
-    void *new_ptr = malloc(size);
-    if (new_ptr == NULL)
+    else if (size == 0)
     {
+        free(ptr);
         return NULL;
     }
-
-    for (int i = 0; i < size; i++)
+    else
     {
-        ((char *)new_ptr)[i] = ((char *)ptr)[i];
+        void *newptr = malloc(size);
+        memcpy(newptr, ptr, size);
+        free(ptr);
+        return newptr;
     }
-    free(ptr);
-    return new_ptr;
 }
 
 int main()
 {
-    int *arr = (int *)malloc(10 * sizeof(int));
-    for (int i = 0; i < 10; i++)
+    int *arr1 = (int *)malloc(5 * sizeof(int));
+    arr1[0] = 1;
+    arr1[1] = 2;
+    arr1[2] = 3;
+    arr1[3] = 4;
+    arr1[4] = 5;
+
+    int *arr2 = (int *)my_realloc(arr1, 12 * sizeof(int));
+    arr2[5] = 6;
+    arr2[6] = 7;
+    arr2[7] = 8;
+    arr2[8] = 9;
+    arr2[9] = 10;
+    for (int i = 0; i < 12; i++)
     {
-        arr[i] = i + 1;
+        printf("%d ", arr2[i]);
     }
-    for (int i = 0; i < 10; i++)
+    char *arr3 = (char *)malloc(10 * sizeof(char));
+    arr3[0] = 'a';
+    arr3[1] = 'b';
+    arr3[2] = 'c';
+    arr3[3] = 'd';
+    arr3[4] = 'e';
+    arr3[5] = 'f';
+    arr3[6] = 'g';
+    arr3[7] = 'h';
+    arr3[8] = 'i';
+    arr3[9] = 'j';
+    char *arr4 = (char *)my_realloc(arr3, 5 * sizeof(char));
+    for (int i = 0; i < 5; i++)
     {
-        printf("%d ", arr[i]);
+        printf("%c ", arr4[i]);
     }
-    printf("\n");
-    arr = my_realloc(arr, 20 * sizeof(int));
-    for (int i = 10; i < 20; i++)
-    {
-        arr[i] = i + 1;
-    }
-    for (int i = 0; i < 20; i++)
-    {
-        printf("%d ", arr[i]);
-    }
-    printf("\n");
-    free(arr);
     return 0;
 }
