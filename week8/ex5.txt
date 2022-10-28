@@ -1,0 +1,4 @@
+The physical address is the address within a specific memory hardware component. 
+On the other hand , the virtual address is the address that is used by the operating system and the applications.
+Virtual addresses are usually larger than physical addresses.
+The OS is responsible for translating virtual addresses to physical addresses.

@@ -1,0 +1,2 @@
+At least 13 bits are required to properly index 8 KB (2 ^ 13 = 8196 = 8 KB). 
+This means that there are 16-13=3 bits left for the page index, so we need 2^3=8 entries in the table.
