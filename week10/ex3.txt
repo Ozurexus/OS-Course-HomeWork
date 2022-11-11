@@ -1,3 +1,12 @@
+Commands:
+chmod ugo-x _ex3.txt
+ls -l _ex3.txt > ex3.txt
+chmod uo+rwx _ex3.txt
+ls -l _ex3.txt >> ex3.txt
+chmod g=u _ex3.txt
+ls -l _ex3.txt >> ex3.txt
+
+Output:
 -rw-r--r-- 1 hp hp 11 ноя 11 14:29 _ex3.txt
 -rwxr--rwx 1 hp hp 11 ноя 11 14:29 _ex3.txt
 -rwxrwxrwx 1 hp hp 11 ноя 11 14:29 _ex3.txt
