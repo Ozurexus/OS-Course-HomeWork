@@ -15,7 +15,8 @@ int main()
     int *inodes = malloc(sizeof(int) * 512);
     char **names = malloc(sizeof(char) * 512);
     DIR *directory = opendir("tmp");
-    printf("File - Hard Links\n");
+    FILE *file = fopen("ex4.txt", "w");
+    fprintf(file, "File - Hard Links\n");
     while ((d = readdir(directory)) != 0)
     {
         stat(d->d_name, s);
@@ -33,13 +34,13 @@ int main()
         }
         if (occurences >= 2 && strcmp(names[i], ".") != 0 && strcmp(names[i], "..") != 0)
         {
-            printf("%s - ", names[i]);
+            fprintf(file, "%s - ", names[i]);
             for (int j = 0; j < counter; j++)
             {
                 if (inodes[i] == inodes[j] && names[i] != names[j])
-                    printf("%s ", names[j]);
+                    fprintf(file, "%s ", names[j]);
             }
-            printf("\n");
+            fprintf(file, "\n");
         }
     }
     closedir(directory);
