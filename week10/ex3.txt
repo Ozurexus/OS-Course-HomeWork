@@ -1,0 +1,7 @@
+-rw-r--r-- 1 hp hp 11 ноя 11 14:29 _ex3.txt
+-rwxr--rwx 1 hp hp 11 ноя 11 14:29 _ex3.txt
+-rwxrwxrwx 1 hp hp 11 ноя 11 14:29 _ex3.txt
+
+660 is -rw-rw---- means that the owner can read and write, the group can read and write, and others can't do anything. 
+775 is -rwxrwxr-x means that the owner and the group can read, write and execute, and others can only read and execute.
+777 is -rwxrwxrwx means that the owner, the group and others can read, write and execute.
