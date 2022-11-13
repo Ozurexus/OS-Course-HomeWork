@@ -44,5 +44,8 @@ int main()
         }
     }
     closedir(directory);
+    fclose(file);
+    free(inodes);
+    free(names);
     return 0;
 }
