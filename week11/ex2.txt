@@ -1,0 +1,2 @@
+file1.txt lost+found ex2.out ex2.txt file2.txt 
+file1.txt lost+found ex2.out bin lib64 lib ex2.txt file2.txt 
