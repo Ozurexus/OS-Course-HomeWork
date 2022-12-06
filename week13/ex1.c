@@ -54,6 +54,11 @@ int main(int argc, char *argv[])
             printf("The sum of the C columns is greater than the E columns, exiting.\n");
             return 1;
         }
+        else if (sum != A[i] + E[i])
+        {
+            printf("The sum of the C columns is not equal to the sum of the A and E columns, exiting.\n");
+            return 1;
+        }
         sum = 0;
     }
     int arr[processes];
