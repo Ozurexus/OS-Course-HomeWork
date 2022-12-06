@@ -1,7 +1,7 @@
 There are 3 strategies of dealing with deadlock: recovery, prevention and avoidance.
-1. Recovery: among the possible ways of recovery are: preemption, rollback and killing processes:
-    a) preeemption: this strategy is used if the system is able to temprorarily redistribute  resource from the currnet owner to the process that is waiting for the resource.
-    b) rollback: this strategy is used if the system is able to restore the system to the state before the deadlock occured - to a checkpoint.
+1. Recovery: among the possible ways of recovery are pre-emption, rollback and killing processes:
+    a) pre-emption: this tactic can be employed when the system can temporarily shift resources from the current owner to the process that is waiting for them.
+    b) rollback: this tactic is employed if the system is able to return it to a checkpoint that occurred prior to the deadlock.
     c) killing processes: this strategy is used if the system is able to kill one or more processes to break the deadlock, only used if the system can restart that process later without significant damage.
-2. Prevention: deadlock can be prevented if it is possible to never satisfy one of the 4 conditions of deadlock: mutual exclusion, hold and wait, no preemption and circular wait.
-3. Avoidance: deadlocks can be avoided only if certain data is available in advance, in other words, system should have enough information to be able to know, whether allocation is safe or not.
+2. Prevention: deadlock can be prevented if it is possible to never satisfy one of the 4 conditions of deadlock: mutual exclusion, hold and wait, no pre-emption and circular wait.
+3. Avoidance: deadlocks can be avoided only if certain data is available in advance, in other words, the system should have enough information to be able to know whether allocation is safe or not.
