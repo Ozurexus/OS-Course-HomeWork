@@ -1,2 +1,0 @@
-   text	   data	    bss	    dec	    hex	filename
-430097920	 518144	      0	430616064	19aaae00	Warhammer3.exe

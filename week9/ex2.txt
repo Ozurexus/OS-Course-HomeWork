@@ -1,7 +1,0 @@
-The ratio will highly depend on the page frames number, so I will construct one sequence and provide best and worst cases.
-The sequence have numbers from 1 to page frames number:
-1 2 3 4 5 6 7 8 9 10 11 12 1 2 3 4 5 6 7 8 9 10 11 12
-The best case will be for the page frames number>=12: we will get 1 to 1 ratio of hits and misses. 
-Increasing the amount of subsequences 1 2 ... 12 will only increase the ratio. 
-The worst case for this sequence will happen, if the page frames number<=11: there will be no hits, only misses, resulting in hit ratio of 0.
-Increasing the amount of subsequences 1 2 ... 12 will not change the ratio.
